@@ -3,9 +3,7 @@ package com.rkr.mysiminfo;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/**
- * Created by rkadurra on 19-Oct-15.
- */
+
 public class MySharedPreferences {
     public static final String MyPREFERENCES = "Credentials";
     public static String Password = "myPasswordKey";
@@ -44,8 +42,7 @@ public class MySharedPreferences {
             }
             editor.putString(key, value);
             editor.commit();
-            //for debug purpose
-            //Toast.makeText(context.getApplicationContext(), "Key: " + key + " Value: " + value + " added", Toast.LENGTH_LONG).show();
+
         } catch (Exception e) {
             e.printStackTrace();
             return false;

@@ -18,9 +18,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by rkadurra on 28-Mar-16.
- */
+
 public class PhoneInfoActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     String[] displayList = {"Line No.","Phone Type","IMEI","Model","Manufacturer","Android API Level","SDK Version"};
     String[] displayListActualItems;
@@ -43,7 +41,6 @@ public class PhoneInfoActivity extends AppCompatActivity implements AdapterView.
         coordinatorLayoutView = findViewById(R.id.snackbarPosition);
         utility=new Utility(getApplicationContext());
         mySharedPreferences = new MySharedPreferences(getApplicationContext());
-        //sharedPreferences = getSharedPreferences(MySharedPreferences.MyPREFERENCES, MODE_PRIVATE);
         sharedPreferences= PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
         getPhoneInfo(telephonyManager);
@@ -52,12 +49,6 @@ public class PhoneInfoActivity extends AppCompatActivity implements AdapterView.
     private void getPhoneInfo(TelephonyManager telephonyManager) {
         List<String> simItems = new ArrayList<String>();
         String lineNum;
-        /*try {
-            lineNum = telephonyManager.getLine1Number();
-        } catch (SecurityException e) {
-            lineNum = "UNKNOWN";
-        }
-        */
         lineNum = telephonyManager.getLine1Number();
         if (lineNum==null){
             lineNum="UNKNOWN";
@@ -134,7 +125,6 @@ public class PhoneInfoActivity extends AppCompatActivity implements AdapterView.
         super.onBackPressed();
         Intent intent=new Intent(getApplicationContext(),SelectionActivity.class);
         startActivity(intent);
-        //finish();
         utility.finishTask(PhoneInfoActivity.this);
     }
     @Override
@@ -147,8 +137,6 @@ public class PhoneInfoActivity extends AppCompatActivity implements AdapterView.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         switch (id){
             case R.id.action_share:
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);

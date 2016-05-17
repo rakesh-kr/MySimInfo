@@ -1,8 +1,6 @@
 package com.rkr.mysiminfo;
 
-/**
- * Created by rkadurra on 15-Nov-15.
- */
+
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -26,17 +24,14 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
     public int getCount() {
-        // TODO Auto-generated method stub
         return title.length;
     }
 
     public Object getItem(int position) {
-        // TODO Auto-generated method stub
         return null;
     }
 
     public long getItemId(int position) {
-        // TODO Auto-generated method stub
         return 0;
     }
 
@@ -46,7 +41,6 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
         ViewHolder holder;
         LayoutInflater inflater = context.getLayoutInflater();
 
