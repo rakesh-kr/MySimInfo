@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">My Sim Info</string>
+    <string name="unlock_text">Enter the passcode</string>
+    <string name="login">Login</string>
+    <string name="create_pin">Create Passcode</string>
+    <string name="enter_passcode">Enter 4 Digit Passcode</string>
+    <string name="four_digit">4 Digits</string>
+    <string name="reenter_passcode">Re-Enter Passcode</string>
+    <string name="create">Create</string>
+    <string name="example_txt">Image</string>
+    <string name="share">Share</string>
+    <string name="help">Help</string>
+    <string name="mobile_num">Mobile number</string>
+    <string name="mobile">Mobile Number</string>
+    <string name="call">Call</string>
+    <string name="copy">Copy</string>
+    <string name="defMobNum">0000000000</string>
+    <string name="mob_num_dialog_title">Mobile Number</string>
+    <string name="settings_title_bar_name">Settings</string>
+    <string name="change_passcode">Change Passcode</string>
+    <string name="old_passcode">Old Passcode</string>
+    <string name="new_passcode">New Passcode</string>
+    <string name="change">Change</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="settings">Settings</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_title_bar_name"
+    android:summary="Settings">
+    <PreferenceCategory
+        android:title="Sim Related Settings">
+        <EditTextPreference android:title="My Phone Number"
+            android:key="myPhoneNumberKey"
+            android:summary="Please input your 10 Digit mobile number"
+            android:defaultValue="@string/defMobNum"
+            android:dialogTitle="@string/mob_num_dialog_title"
+            android:maxLength="10"
+            android:inputType="phone"/>
+        <CheckBoxPreference android:title="Track Me"
+            android:defaultValue="false"
+            android:summary="This option if selected will allow buddies in buddy list to track your sim/device location"
+            android:key="trackMeKey"
+            />
+    </PreferenceCategory>
+
+
+
+    <PreferenceCategory
+        android:title="Application Related Settings">
+        <PreferenceScreen
+            android:title="Change Passcode"
+            android:summary="This will allow user to change the passcode">
+            <intent
+                android:targetClass="com.rkr.mysiminfo.ChangePasscodeActivity"
+                android:targetPackage="com.rkr.mysiminfo"
+                />
+
+        </PreferenceScreen>
+
+        <CheckBoxPreference android:title="Check for Updates"
+            android:defaultValue="false"
+            android:summary="This option if selected will allow the application to automatically check for latest versions."
+            android:key="applicationUpdatesKey" />
+
+    </PreferenceCategory>
+
+    <!--<ListPreference     android:title="Download Details"
+        android:summary="Select the kind of data that you would like to download"
+        android:key="downloadType"
+        android:defaultValue="1"
+        android:entries="@array/listArray"
+        android:entryValues="@array/listValues" />
+        -->
+</PreferenceScreen>
