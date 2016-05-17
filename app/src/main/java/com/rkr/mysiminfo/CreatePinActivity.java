@@ -11,9 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-/**
- * Created by rkadurra on 28-Mar-16.
- */
+
 public class CreatePinActivity extends AppCompatActivity {
 
     private String passcode, confirmPasscode,mobile_num;
@@ -31,7 +29,6 @@ public class CreatePinActivity extends AppCompatActivity {
         confirmPasscodeEditTxt = (EditText) findViewById(R.id.reenter_passcode_editTxt);
         mobileEditTxt=(EditText)findViewById(R.id.phone_num_editTxt_id);
         createButton = (Button) findViewById(R.id.create_button);
-        //sharedPreferences = getSharedPreferences(MySharedPreferences.MyPREFERENCES, MODE_PRIVATE);
         sharedPreferences= PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         mySharedPreferences = new MySharedPreferences(getApplicationContext());
         if (!sharedPreferences.getBoolean(MySharedPreferences.FirstTime, false)) {

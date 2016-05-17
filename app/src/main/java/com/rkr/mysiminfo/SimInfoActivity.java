@@ -27,9 +27,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by rkadurra on 28-Mar-16.
- */
 public class SimInfoActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     String[] displayList = {"SIM state", "Country", "Operator Code", "Network", "Network Type","dBM Level","ASU Level","Signal Strength", "Serial No.", "Subscriber ID", "Voice Mail No.", "In Roaming", "SMS Capable",
             "Voice Capable"};

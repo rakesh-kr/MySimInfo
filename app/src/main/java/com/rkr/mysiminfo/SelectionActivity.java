@@ -28,9 +28,6 @@ import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.READ_CONTACTS;
 import static android.Manifest.permission.READ_PHONE_STATE;
 
-/**
- * Created by rkadurra on 30-Mar-16.
- */
 public class SelectionActivity extends AppCompatActivity {
     String LOG_TAG = "MY_SIM_INFO_APP";
     String[] displayList = {"Sim information", "Sim Contacts", "Phone Information", "Settings"};
@@ -72,7 +69,7 @@ public class SelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
-        //for nav drawer
+        //for navigation drawer
         mDrawerList = (ListView)findViewById(R.id.navList);
         mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         mActivityTitle = getTitle().toString();
@@ -104,7 +101,6 @@ public class SelectionActivity extends AppCompatActivity {
     private void myItemClickMethod(int position) {
         switch (position) {
             case 0:
-                //sim info
             {
                 String[] permissions_list = {READ_PHONE_STATE, ACCESS_COARSE_LOCATION};
                 resultCode = READ_PHONE_STATE_RESULT_SIM;
@@ -225,7 +221,6 @@ public class SelectionActivity extends AppCompatActivity {
                 intent = new Intent(getApplicationContext(),SettingsPreferences.class);
         }
         startActivity(intent);
-        //finish();
         utility.finishTask(SelectionActivity.this);
     }
 
@@ -312,7 +307,6 @@ public class SelectionActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }

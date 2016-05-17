@@ -40,7 +40,6 @@ public class Login extends AppCompatActivity {
         editText3.setSelectAllOnFocus(true);
         editText4.setSelectAllOnFocus(true);
         buttonLogin = (Button) findViewById(R.id.button_login);
-        //sharedPref = getSharedPreferences(MySharedPreferences.MyPREFERENCES, MODE_PRIVATE);
         sharedPref= PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         if (!sharedPref.getBoolean(MySharedPreferences.FirstTime, false)) {
             //create pin
@@ -131,7 +130,6 @@ public class Login extends AppCompatActivity {
                     editText1.requestFocus();
                 } else {
                     userPassword = editText1.getText().toString() + editText2.getText().toString() + editText3.getText().toString() + editText4.getText().toString();
-                    //Toast.makeText(getApplicationContext(),userPassword, Toast.LENGTH_LONG).show();
                     if (!validatePasscode()) {
                         editText1.setText("");
                         editText2.setText("");
@@ -151,7 +149,6 @@ public class Login extends AppCompatActivity {
         String storedPasscode = mySharedPreferences.getMyStringSharedPrefs(MySharedPreferences.Password, sharedPref, true);
         if (storedPasscode!=null) {
             if (storedPasscode.equals(userPassword)) {
-                //Toast.makeText(getApplicationContext(),"Password matched",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), SelectionActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);

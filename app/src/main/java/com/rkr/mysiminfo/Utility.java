@@ -8,9 +8,6 @@ import android.os.Build;
 import android.text.ClipboardManager;
 import android.widget.Toast;
 
-/**
- * Created by rkadurra on 30-Mar-16.
- */
 public class Utility {
     Context myContext;
 

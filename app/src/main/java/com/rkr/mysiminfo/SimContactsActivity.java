@@ -22,9 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * Created by rkadurra on 03-Apr-16.
- */
 public class SimContactsActivity extends AppCompatActivity {
     ListView lView;
     ListViewAdapter listViewAdapter;
@@ -56,7 +53,6 @@ public class SimContactsActivity extends AppCompatActivity {
     }
 
     private void readContacts() {
-        //ContentResolver cr = getContentResolver();
         try {
             Uri simUri = Uri.parse("content://icc/adn");
             Cursor cur = this.getContentResolver().query(simUri,
@@ -155,7 +151,6 @@ public class SimContactsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         Utility utility=new Utility(getApplicationContext());
-        //noinspection SimplifiableIfStatement
         switch (id){
             case R.id.action_help:
                 //TODO

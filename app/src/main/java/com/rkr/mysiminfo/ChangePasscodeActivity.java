@@ -11,9 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-/**
- * Created by rkadurra on 06-Apr-16.
- */
 public class ChangePasscodeActivity extends AppCompatActivity {
     Utility utility;
     Button updateBtn;
@@ -82,8 +79,6 @@ public class ChangePasscodeActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         switch (id) {
             case android.R.id.home:
                 startNewActivity();

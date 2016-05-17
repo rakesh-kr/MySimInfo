@@ -23,17 +23,14 @@ public class ListViewAdapterForImage extends BaseAdapter {
     }
 
     public int getCount() {
-        // TODO Auto-generated method stub
         return title.length;
     }
 
     public Object getItem(int position) {
-        // TODO Auto-generated method stub
         return null;
     }
 
     public long getItemId(int position) {
-        // TODO Auto-generated method stub
         return 0;
     }
 
@@ -44,7 +41,6 @@ public class ListViewAdapterForImage extends BaseAdapter {
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
         final ViewHolder holder;
 
         LayoutInflater inflater = context.getLayoutInflater();
